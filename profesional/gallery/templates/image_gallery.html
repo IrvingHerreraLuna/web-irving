@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Galeria{% endblock %}
+{% block content %}
+
+  <body>
+    {% for image in images %}
+      <img src="{{image.image.url}}" alt="{{image.name}}" style="width:150px;">
+      <p>{{image.name}}</p>
+      <p>{{image.description}}</p>
+    {% endfor %}
+  <a class="btn" href="{% url 'upload_image' %}">Subir imagen</a>
+  </body>
+{% endblock %}

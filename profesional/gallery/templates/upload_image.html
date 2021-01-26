@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Subir imagen{% endblock %}
+{% block content %}
+
+<body>
+    <form action="{% url 'upload_image' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <p>
+            <input id = "id_image" type="file" accept="image/*" name="name" required>
+        </p>
+        <p>
+            Nombre de la imagen:
+            <input id = "id_image" type="text" name="name" required>
+        </p>
+        <p>
+            Descripción de la imagen:
+            <input id = "id_image" type="text" name="description">
+        </p>
+
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+
+
+{% endblock %}

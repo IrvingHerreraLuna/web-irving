@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/opt/anaconda3/envs/django/bin/python",
+    "git.ignoreLimitWarning": true
+}
